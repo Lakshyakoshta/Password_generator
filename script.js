@@ -123,8 +123,6 @@ async function copyContent(){
 
         try{
             await navigator.clipboard.writeText(password);
-            // copieddiv.style.transition="display 1s";
-            // copieddiv.style.scale="1";
             copieddiv.innerHTML="COPIED";
         }
         catch(e){
@@ -133,9 +131,6 @@ async function copyContent(){
         
             copieddiv.classList.add("active");     
             setTimeout(()=>{
-                // copieddiv.style.transition="scale 0.5s";
-                // copieddiv.style.scale="0";
-                // copieddiv.style.display="none";
                 copieddiv.classList.remove("active");     
             },1500);
     }
@@ -147,7 +142,6 @@ gntbtn.addEventListener('click',()=>{
     passwordfield.innerHTML=password;
     passwordfield.style.opacity=1;
     indiup();
-
 });
 
 function gnt(len){
