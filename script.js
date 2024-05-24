@@ -45,17 +45,17 @@ function getRndNum(min,max){
 }
 
 function getNum(){
-    let num=getRndNum(0,9);
+    let num=getRndNum(0,10);
     return num;
 }
 
 function getUpper(){
-    let up=getRndNum(65,90);
+    let up=getRndNum(65,91);
     return String.fromCharCode(up);
 }
 
 function getLower(){
-    let low=getRndNum(97,122);
+    let low=getRndNum(97,123);
     return String.fromCharCode(low);
 }
 
@@ -183,13 +183,13 @@ function gnt(len){
     if(num){
         array.push(getNum);
     }
-    if(symbols){
+    if(sym){
         array.push(getSymbol);
     }
 
 
     for(let i=0;i<len;i++){
-        let index=getRndNum(0,array.length-1);
+        let index=getRndNum(0,array.length);
 
         temp=temp+array[index]();
     }
